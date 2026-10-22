@@ -224,36 +224,52 @@
   scroll-margin-top: 110px;
 }
 
-.veille-topic {
-  margin-top: 76px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(17, 17, 17, .2);
-}
-
-.veille-topic h1 {
-  margin: 0;
-  font: 600 clamp(28px, 3.2vw, 42px)/1.12 "Space Grotesk", sans-serif;
-  letter-spacing: -.045em;
-}
-
-.veille-topic u {
-  text-decoration-color: #9BCB3B;
-  text-decoration-thickness: 3px;
-  text-underline-offset: .12em;
-}
-
 .veille-topic-visual {
-  margin: 30px 0 0;
+  position: relative;
+  width: min(100%, 900px);
+  height: clamp(210px, 28vw, 320px);
+  margin: 76px auto 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #17191c;
 }
 
 .veille-topic-visual img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veille-topic-visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .68), rgba(0, 0, 0, .34));
+  content: "";
+}
+
+.veille-topic-caption {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(20px, 5vw, 56px);
+  text-align: center;
+}
+
+.section-page .veille-topic-caption h1 {
+  max-width: 780px;
+  margin: 0;
+  color: #fff;
+  font: 600 clamp(20px, 2.35vw, 30px)/1.16 "Space Grotesk", sans-serif;
+  letter-spacing: -.035em;
 }
 
 .veille-sources {
-  margin-top: 24px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(17, 17, 17, .24);
 }
 
 .veille-sources > h2 {
@@ -1229,13 +1245,9 @@
     margin-top: 54px;
   }
 
-  .veille-topic {
+  .veille-topic-visual {
+    height: clamp(190px, 42vw, 270px);
     margin-top: 54px;
-    padding-bottom: 22px;
-  }
-
-  .veille-topic h1 {
-    font-size: clamp(23px, 6vw, 30px);
   }
 
   .veille-page .section-page-news {
