@@ -252,6 +252,46 @@
   height: auto;
 }
 
+.veille-sources {
+  margin-top: 24px;
+}
+
+.veille-sources > h2 {
+  margin: 0 0 12px;
+  font: 600 18px/1.2 "Space Grotesk", sans-serif;
+}
+
+.veille-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.veille-source {
+  display: flex;
+  min-height: 82px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.veille-source img {
+  display: block;
+  width: 100%;
+  max-width: 82px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.veille-source figcaption {
+  color: #333;
+  font: 500 10px/1.2 "DM Sans", sans-serif;
+}
+
 .veille-areas {
   margin-top: 32px;
   border-top: 1px solid rgba(17, 17, 17, .24);
@@ -479,19 +519,22 @@
 
 .e5-school-work,
 .e5-technical-projects,
-.e6-missions {
+.e6-missions,
+.e5-company-work {
   margin-top: 64px;
   scroll-margin-top: 110px;
 }
 
 .e5-school-work > h2,
-.e5-technical-projects > h2 {
+.e5-technical-projects > h2,
+.e5-company-work > h2 {
   margin-top: 14px;
   font: 600 36px/1.1 "Space Grotesk", sans-serif;
 }
 
 .e5-school-work .section-page-intro,
-.e6-missions .section-page-intro {
+.e6-missions .section-page-intro,
+.e5-company-work .section-page-intro {
   margin-top: 14px;
   font-size: 17px;
 }
@@ -988,6 +1031,10 @@
 }
 
 @media (max-width: 800px) {
+  .veille-sources-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .standalone-section-page .nav {
     position: fixed;
   }
@@ -1228,12 +1275,14 @@
 
   .e5-school-work,
   .e5-technical-projects,
-  .e6-missions {
+  .e6-missions,
+  .e5-company-work {
     margin-top: 48px;
   }
 
   .e5-school-work > h2,
-  .e5-technical-projects > h2 {
+  .e5-technical-projects > h2,
+  .e5-company-work > h2 {
     font-size: 30px;
   }
 
