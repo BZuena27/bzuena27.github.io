@@ -295,6 +295,23 @@
   text-align: center;
 }
 
+.veille-source a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.veille-source a:focus-visible {
+  border-radius: 3px;
+  outline: 2px solid #658d1f;
+  outline-offset: 4px;
+}
+
 .veille-source img {
   display: block;
   width: 100%;
@@ -303,7 +320,7 @@
   object-fit: contain;
 }
 
-.veille-source figcaption {
+.veille-source a > span {
   color: #333;
   font: 500 10px/1.2 "DM Sans", sans-serif;
 }
