@@ -370,6 +370,14 @@
   outline-offset: 3px;
 }
 
+.veille-area-description {
+  margin: 0 0 16px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
 .veille-work-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
